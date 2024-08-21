@@ -1,5 +1,3 @@
-" Vundle
-filetype off
 
 set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
@@ -16,7 +14,7 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'TomNomNom/xoria256.vim'
 Plugin 'fatih/vim-go'
 Plugin 'rust-lang/rust.vim'
-
+Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 
 
@@ -33,6 +31,11 @@ set relativenumber
 let g:airline_powerline_fonts = 1
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='powerlineish'
+
+let mapleader = ","
+" nerdtree
+nnoremap <leader>n :NERDTreeToggle<CR>
+
 
 " History
 set history=50
@@ -87,7 +90,8 @@ if &t_Co == 256
 endif
 
 " Switch tabs
-map 8 <Esc>:tabe 
+map 8 <Esc>:tabe<CR> 
+map 2 :tabclose<CR>
 map 9 gT
 map 0 gt
 
