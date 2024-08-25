@@ -34,8 +34,7 @@ let g:airline_theme='powerlineish'
 
 let mapleader = ","
 " nerdtree
-nnoremap <leader>n :NERDTreeToggle<CR>
-
+nnoremap <C-n> :NERDTreeToggle<CR>
 
 " History
 set history=50
