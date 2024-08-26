@@ -5,15 +5,13 @@ call vundle#begin()
 " Bundles
 Plugin 'VundleVim/Vundle.vim'
 Plugin 'tpope/vim-fugitive'
-Plugin 'sjl/gundo.vim'
 Plugin 'godlygeek/tabular'
+Plugin 'mbbill/undotree'
 Plugin 'bling/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'scrooloose/nerdtree'
 Plugin 'TomNomNom/xoria256.vim'
-Plugin 'fatih/vim-go'
-Plugin 'rust-lang/rust.vim'
 Plugin 'davidhalter/jedi-vim'
 call vundle#end()
 
@@ -94,8 +92,8 @@ map 2 :tabclose<CR>
 map 9 gT
 map 0 gt
 
-" Gundo toggle
-map <F5> <Esc>:GundoToggle<CR>
+" undotree toggle
+nnoremap <F5> :UndotreeToggle<CR>
 
 " Toggle line-wrap
 map <F6> <Esc>:set wrap!<CR>
