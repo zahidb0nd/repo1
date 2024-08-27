@@ -136,6 +136,13 @@ nmap <Leader>b :!echo <C-R><C-W> \| base64 -d<CR>
 nmap <Leader>g :tabnew\|read !grep -Hnr '<C-R><C-W>'<CR>
 nmap <Leader>s :%!sort -u --version-sort<CR>
 
+"fzf keybinds
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>g :Rg<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>l :Lines<CR>
+let g:fzf_preview_command = 'bat --color=always --style=plain {}'
+
 " Visual prompt for command completion
 set wildmenu
 
@@ -170,9 +177,3 @@ endif
 set noesckeys
 set nocompatible
 
-
-nnoremap <silent> <leader>f :Files<CR>
-nnoremap <silent> <leader>g :Rg<CR>
-nnoremap <silent> <leader>b :Buffers<CR>
-nnoremap <silent> <leader>l :Lines<CR>
-let g:fzf_preview_command = 'bat --color=always --style=plain {}'

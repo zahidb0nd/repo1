@@ -158,3 +158,10 @@ eval "$(oh-my-posh init bash --config /mnt/c/Users/hussain/AppData/Local/Program
 export PATH=$PATH:~/nikto/program
 export PATH=$PATH:$HOME/go/bin
 alias python="python3"
+alias vpn="sudo openvpn Zahidbond.ovpn"
+
+[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+# Set up fzf key bindings and fuzzy completion
+eval "$(fzf --bash)"
+alias bat="batcat"
+alias fvim='vim $(fzf --preview="bat --color=always {}")'
