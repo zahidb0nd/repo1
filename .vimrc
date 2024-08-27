@@ -170,3 +170,9 @@ endif
 set noesckeys
 set nocompatible
 
+
+nnoremap <silent> <leader>f :Files<CR>
+nnoremap <silent> <leader>g :Rg<CR>
+nnoremap <silent> <leader>b :Buffers<CR>
+nnoremap <silent> <leader>l :Lines<CR>
+let g:fzf_preview_command = 'bat --color=always --style=plain {}'
